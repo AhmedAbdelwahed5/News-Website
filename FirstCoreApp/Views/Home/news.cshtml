@@ -1,0 +1,35 @@
+﻿
+@model List<News>
+
+ <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>الأخبار @ViewBag.category </h2>
+        </div>
+        <center>
+      
+            @foreach(var news in Model){
+          <div class="row" style="margin:30px;">
+          
+       
+          <div class="col-12">
+              <div class="col-12"> 
+                  
+                  <img src="/assets/img/slide/3.png" class="img-fluid" style="width:300px; height:300px; border-radius:50%"alt=""></div>
+            <h3>@news.Title</h3>
+            <h4>@news.Date</h4>
+            <p class="fst-italic">
+             @news.Topic
+            </p>
+             </div>
+          </div>
+          <center>
+             <a class="btn btn-danger" href="/home/Delete/@news.Id">Delete</a>
+              </center>
+            <hr />
+            }
+       </center>
+
+      </div>
+    </section><!-- End About Us Section -->
